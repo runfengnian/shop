@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>跨境供应链服务 - 南京凯润农业科技有限公司</title>
+    <title>跨境供应链服务 - 南京雨润农业科技有限公司</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,7 @@
         <div class="header-inner">
             <!-- Logo：跨越上下两行导航 -->
             <a href="index.html" class="logo">
-                <img src="images/kairun-lay.png" alt="南京凯润">
+                <img src="images/kairun-lay.png" alt="南京雨润">
             </a>
 
             <!-- 汉堡按钮（仅移动端显示） -->
@@ -28,11 +28,22 @@
 
             <!-- 导航容器：靠右，两行布局 -->
             <nav class="nav-wrapper">
+
                 <!-- 上层：页面切换标签 -->
                 <div class="top-nav">
-                    <a href="product.html" class="top-nav-item">润沣年小店</a>
-                    <a href="index.html" class="top-nav-item active">跨境服务</a>
+                    <!-- 注意：这里加上了 tab-left 和 tab-right 类名 -->
+                    <a href="product.html" class="top-nav-item tab-left active">润沣年小店</a>
+                    <a href="index.html" class="top-nav-item tab-right">跨境服务</a>
+
+                <!-- 新增：语言切换按钮 -->
+                <div class="lang-switch">
+                <!-- href 里填您对应的英文版、德文版页面路径 -->
+                     <a href="index-en.html" class="lang-btn" title="English">EN</a>
+                     <a href="index-de.html" class="lang-btn" title="Deutsch">DE</a>
                 </div>
+
+                </div>
+
                 <!-- 下层：页内锚点 -->
                 <div class="sub-nav">
                     <ul class="nav-list">
@@ -51,7 +62,7 @@
         <!-- ========== 首屏 ========== -->
         <section class="hero-section" id="home">
             <div class="container">
-                <h1 class="hero-title">南京凯润农业科技有限公司</h1>
+                <h1 class="hero-title">南京雨润农业科技有限公司</h1>
                 <p class="hero-subtitle">冻品肉类跨国供应链服务 · 让世界尝到中国好肉</p>
                 <div class="hero-cta">
                     <a href="#service" class="btn btn-outline">了解业务</a>
@@ -66,7 +77,7 @@
                 <p class="section-subtitle">连接国产优质肉品与全球餐桌</p>
                 <div style="max-width: 900px; margin: 0 auto;">
                     <p style="font-size:1.05rem; line-height:1.9; color:var(--dark-color); margin-bottom:18px;">
-                        南京凯润农业科技有限公司成立于 <strong style="color:var(--primary-color);">2015 年</strong>，主营冻品肉类跨国供应链服务。
+                        南京雨润农业科技有限公司成立于 <strong style="color:var(--primary-color);">2015 年</strong>，主营冻品肉类跨国供应链服务。
                     </p>
                     <p style="font-size:1.05rem; line-height:1.9; color:var(--dark-color); margin-bottom:18px;">
                         本公司熟悉进出口业务，上下游资源整合能力强。上游我们对接国内优质肉品屠宰加工厂，范围涵盖鸡肉产品、猪肉产品、牛羊肉产品等；下游我们直面海外的食材采购商。
@@ -92,7 +103,7 @@
                     <div class="flow-arrow"><i class="fas fa-angle-right"></i></div>
                     <div class="flow-item flow-item-center">
                         <div class="flow-icon"><i class="fas fa-ship"></i></div>
-                        <h3>我们 · 凯润进出口</h3>
+                        <h3>我们 · 雨润进出口</h3>
                         <p>熟悉进出口业务，上下游资源整合能力强，提供选品、报关、冷链、物流全链路服务。</p>
                     </div>
                     <div class="flow-arrow"><i class="fas fa-angle-right"></i></div>
@@ -184,7 +195,7 @@
         <!-- ========== 行动区 ========== -->
         <section class="cta-section">
             <div class="container">
-                <h2>想聊聊您的采购需求？</h2>
+                <h2>聊聊您的采购需求？</h2>
                 <p>告诉我们您的应用场景与产品要求，我们将为您量身定制跨境供应链解决方案。</p>
                 <a href="product.html#contact" class="btn">立即咨询</a>
             </div>
@@ -198,7 +209,7 @@
             <div class="footer-content">
                 <div class="footer-logo">
                     <div class="logo-rectangle">
-                        <img src="images/kairun-large.png" alt="南京凯润">
+                        <img src="images/kairun-large.png" alt="南京雨润">
                     </div>
                     <div class="logo-rectangle">
                         <img src="images/ZPRF-large.png" alt="中批润丰">
@@ -218,17 +229,29 @@
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-weixin"></i></a>
                         <a href="#"><i class="fab fa-weibo"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="javascript:void(0);" class="qrcode-trigger"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 江苏润丰食品股份有限公司 / 南京凯润农业科技有限公司 / 中批润丰供应链（南京）股份有限公司 版权所有 | 域名：runfengnian.shop</p>
+                <p>&copy; 2026 南京雨润农业科技有限公司 版权所有 | 域名：runfengnian.shop</p>
                 <p>本网站所有产品图片仅供参考，请以实物为准</p>
             </div>
         </div>
     </footer>
 
     <script src="js/script.js"></script>
+
+<!-- 二维码弹窗结构 -->
+<div id="qrcodeModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <!-- 注意修改下面图片的路径为您实际的文件名，比如 qrcode.png 或 tiktok-qr.jpg -->
+        <img src="images/Douyin.jpg" alt="扫码关注我们">
+        <p>扫码关注我们的 TikTok</p>
+    </div>
+</div>
+
+
 </body>
 </html>

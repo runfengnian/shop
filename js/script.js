@@ -64,4 +64,78 @@
         });
     }
 
+
+    /* ---------- 二维码弹窗逻辑 ---------- */
+    const qrcodeTrigger = document.querySelector('.qrcode-trigger');
+    const qrcodeModal = document.getElementById('qrcodeModal');
+    const closeModalBtn = document.querySelector('.close-modal');
+
+    if (qrcodeTrigger && qrcodeModal && closeModalBtn) {
+        // 点击图标打开弹窗
+        qrcodeTrigger.addEventListener('click', function (e) {
+            e.preventDefault();
+            qrcodeModal.classList.add('show');
+        });
+
+        // 点击 X 关闭弹窗
+        closeModalBtn.addEventListener('click', function () {
+            qrcodeModal.classList.remove('show');
+        });
+
+        // 点击黑色半透明背景也能关闭
+        qrcodeModal.addEventListener('click', function (e) {
+            if (e.target === qrcodeModal) {
+                qrcodeModal.classList.remove('show');
+            }
+        });
+    }
+
+    /* ---------- 产品轮播图逻辑 ---------- */
+    const carouselTrack = document.querySelector('.carousel-track');
+    const carouselSlides = Array.from(document.querySelectorAll('.carousel-slide'));
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+    const nextBtn = document.querySelector('.carousel-btn.next');
+    const dotsContainer = document.querySelector('.carousel-dots');
+
+    if (carouselTrack && carouselSlides.length > 0) {
+        let currentIndex = 0;
+
+        // 1. 根据幻灯片数量自动生成底部圆点
+        carouselSlides.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('carousel-dot');
+            if (index === 0) dot.classList.add('active'); // 默认第一个加粗
+            // 点击圆点直接跳转
+            dot.addEventListener('click', () => goToSlide(index));
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = Array.from(document.querySelectorAll('.carousel-dot'));
+
+        // 2. 核心切换函数
+        function goToSlide(index) {
+            currentIndex = index;
+            // 移动轨道
+            carouselTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+            // 更新圆点状态
+            dots.forEach(dot => dot.classList.remove('active'));
+            if (dots[currentIndex]) {
+                dots[currentIndex].classList.add('active');
+            }
+        }
+
+        // 3. 下一组按钮
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % carouselSlides.length;
+            goToSlide(currentIndex);
+        });
+
+        // 4. 上一组按钮
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + carouselSlides.length) % carouselSlides.length;
+            goToSlide(currentIndex);
+        });
+    }
+
+
 });

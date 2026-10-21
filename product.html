@@ -30,8 +30,17 @@
             <nav class="nav-wrapper">
                 <!-- 上层：页面切换标签 -->
                 <div class="top-nav">
-                    <a href="product.html" class="top-nav-item active">润沣年小店</a>
-                    <a href="index.html" class="top-nav-item">跨境服务</a>
+                    <!-- 注意：这里加上了 tab-left 和 tab-right 类名 -->
+                    <a href="product.html" class="top-nav-item tab-left active">润沣年小店</a>
+                    <a href="index.html" class="top-nav-item tab-right">跨境服务</a>
+
+                <!-- 新增：语言切换按钮 -->
+                <div class="lang-switch">
+                <!-- href 里填您对应的英文版、德文版页面路径 -->
+                     <a href="product-en.html" class="lang-btn" title="English">EN</a>
+                     <a href="product-de.html" class="lang-btn" title="Deutsch">DE</a>
+                </div>
+
                 </div>
                 <!-- 下层：页内锚点 -->
                 <div class="sub-nav">
@@ -66,6 +75,22 @@
                 <h2 class="section-title">我们的产品</h2>
                 <p class="section-subtitle">精选优质原料，传统工艺结合现代技术，为您提供便捷美味的预制猪大肠</p>
 
+
+
+<!-- ================= 轮播图容器 ================= -->
+<div class="carousel-container">
+    
+    <!-- 左右切换按钮 -->
+    <button class="carousel-btn prev" aria-label="上一组"><i class="fas fa-chevron-left"></i></button>
+    <button class="carousel-btn next" aria-label="下一组"><i class="fas fa-chevron-right"></i></button>
+
+    <!-- ⚠️ 新增：视口层，专门用来隐藏滑动出去的内容 -->
+    <div class="carousel-viewport">
+        <!-- 轮播轨道 -->
+        <div class="carousel-track">
+
+            <!-- ========== 第一组产品 ========== -->
+            <div class="carousel-slide">
                 <div class="products-grid">
                     <!-- 白煮肥肠 -->
                     <div class="product-card">
@@ -81,20 +106,14 @@
                             </div>
                             <div class="product-features">
                                 <h4>产品特点</h4>
-                                <ul>
-                                    <li>免洗免切免焯水</li>
-                                    <li>原液鲜香口味</li>
-                                    <li>6道清洗工艺，干净卫生</li>
-                                </ul>
+                                <ul><li>免洗免切免焯水</li><li>原液鲜香口味</li><li>6道清洗工艺，干净卫生</li></ul>
                             </div>
                             <div class="product-process">
                                 <h4>加工工艺</h4>
                                 <p>新鲜肥肠一步到位，洗干净，甩干爽，闪冻锁鲜</p>
                             </div>
                             <div class="product-tags">
-                                <span class="tag">方便快捷</span>
-                                <span class="tag">原汁原味</span>
-                                <span class="tag">锁鲜技术</span>
+                                <span class="tag">方便快捷</span><span class="tag">原汁原味</span><span class="tag">锁鲜技术</span>
                             </div>
                         </div>
                     </div>
@@ -109,29 +128,153 @@
                             <h3 class="product-title">香卤肥肠</h3>
                             <div class="product-spec">
                                 <span class="spec-label">规格：</span>
-                                <span class="spec-value">500g/袋</span>
+                                <span class="spec-value">180g/袋</span>
                             </div>
                             <div class="product-features">
                                 <h4>产品特点</h4>
-                                <ul>
-                                    <li>不油不腻不挂汤</li>
-                                    <li>鲜香浓郁</li>
-                                    <li>传承古法卤制</li>
-                                </ul>
+                                <ul><li>不油不腻不挂汤</li><li>鲜香浓郁</li><li>传承古法卤制</li></ul>
                             </div>
                             <div class="product-process">
                                 <h4>加工工艺</h4>
                                 <p>白煮肥肠卤制加工，天然香辛料慢炖入味</p>
                             </div>
                             <div class="product-tags">
-                                <span class="tag">即食即用</span>
-                                <span class="tag">古法卤制</span>
-                                <span class="tag">浓郁鲜香</span>
+                                <span class="tag">即食即用</span><span class="tag">古法卤制</span><span class="tag">浓郁鲜香</span>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div><!-- 第一组结束 -->
+
+            <!-- ========== 第二组产品 ========== -->
+            <div class="carousel-slide">
+                <div class="products-grid">
+                    <!-- 黑煮肥肠 -->
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="images/white-intestine.jpg" alt="黑煮肥肠" class="product-image">
+                            <div class="product-label">免洗免切免焯水</div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">黑煮肥肠</h3>
+                            <div class="product-spec">
+                                <span class="spec-label">规格：</span>
+                                <span class="spec-value">480g/袋</span>
+                            </div>
+                            <div class="product-features">
+                                <h4>产品特点</h4>
+                                <ul><li>免洗免切免焯水</li><li>原液鲜香口味</li><li>6道清洗工艺，干净卫生</li></ul>
+                            </div>
+                            <div class="product-process">
+                                <h4>加工工艺</h4>
+                                <p>新鲜肥肠一步到位，洗干净，甩干爽，闪冻锁鲜</p>
+                            </div>
+                            <div class="product-tags">
+                                <span class="tag">方便快捷</span><span class="tag">原汁原味</span><span class="tag">锁鲜技术</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 金卤肥肠 -->
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="images/spiced-intestine.jpg" alt="金卤肥肠" class="product-image">
+                            <div class="product-label">不油不腻不挂汤</div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">金卤肥肠</h3>
+                            <div class="product-spec">
+                                <span class="spec-label">规格：</span>
+                                <span class="spec-value">180g/袋</span>
+                            </div>
+                            <div class="product-features">
+                                <h4>产品特点</h4>
+                                <ul><li>不油不腻不挂汤</li><li>鲜香浓郁</li><li>传承古法卤制</li></ul>
+                            </div>
+                            <div class="product-process">
+                                <h4>加工工艺</h4>
+                                <p>白煮肥肠卤制加工，天然香辛料慢炖入味</p>
+                            </div>
+                            <div class="product-tags">
+                                <span class="tag">即食即用</span><span class="tag">古法卤制</span><span class="tag">浓郁鲜香</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- 第二组结束 -->
+
+            <!-- ========== 第三组产品 ========== -->
+            <div class="carousel-slide">
+                <div class="products-grid">
+                    <!-- 黑煮肥肠 -->
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="images/white-intestine.jpg" alt="黑煮肥肠" class="product-image">
+                            <div class="product-label">免洗免切免焯水</div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">黑煮肥肠</h3>
+                            <div class="product-spec">
+                                <span class="spec-label">规格：</span>
+                                <span class="spec-value">480g/袋</span>
+                            </div>
+                            <div class="product-features">
+                                <h4>产品特点</h4>
+                                <ul><li>免洗免切免焯水</li><li>原液鲜香口味</li><li>6道清洗工艺，干净卫生</li></ul>
+                            </div>
+                            <div class="product-process">
+                                <h4>加工工艺</h4>
+                                <p>新鲜肥肠一步到位，洗干净，甩干爽，闪冻锁鲜</p>
+                            </div>
+                            <div class="product-tags">
+                                <span class="tag">方便快捷</span><span class="tag">原汁原味</span><span class="tag">锁鲜技术</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 金卤肥肠 -->
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="images/spiced-intestine.jpg" alt="金卤肥肠" class="product-image">
+                            <div class="product-label">不油不腻不挂汤</div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">金卤肥肠</h3>
+                            <div class="product-spec">
+                                <span class="spec-label">规格：</span>
+                                <span class="spec-value">180g/袋</span>
+                            </div>
+                            <div class="product-features">
+                                <h4>产品特点</h4>
+                                <ul><li>不油不腻不挂汤</li><li>鲜香浓郁</li><li>传承古法卤制</li></ul>
+                            </div>
+                            <div class="product-process">
+                                <h4>加工工艺</h4>
+                                <p>白煮肥肠卤制加工，天然香辛料慢炖入味</p>
+                            </div>
+                            <div class="product-tags">
+                                <span class="tag">即食即用</span><span class="tag">古法卤制</span><span class="tag">浓郁鲜香</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- 第三组结束 -->
+
+
+
+        </div> <!-- 轨道结束 -->
+    </div> <!-- 视口结束 -->
+
+    <!-- 底部指示点 -->
+    <div class="carousel-dots"></div>
+
+</div>
+<!-- ================= 轮播图容器结束 ================= -->
+
+
+
             </div>
+
         </section>
 
         <!-- ========== 公司介绍 ========== -->
@@ -221,14 +364,14 @@
                             <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                             <div class="contact-details">
                                 <h4>电子邮箱</h4>
-                                <p>service@runyangnian.shop</p>
+                                <p>service@runfengnian.shop</p>
                             </div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                             <div class="contact-details">
                                 <h4>公司地址</h4>
-                                <p>江苏省南京市江宁区麒麟街道开城路10号</p>
+                                <p>江苏省南京市江宁区开城路10号</p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -287,17 +430,27 @@
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-weixin"></i></a>
                         <a href="#"><i class="fab fa-weibo"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="javascript:void(0);" class="qrcode-trigger"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 江苏润丰食品股份有限公司 / 南京凯润农业科技有限公司 版权所有 | 域名：runfengnian.shop</p>
+                <p>&copy; 2026  南京凯润农业科技有限公司 版权所有 | 域名：runfengnian.shop</p>
                 <p>本网站所有产品图片仅供参考，请以实物为准</p>
             </div>
         </div>
     </footer>
 
     <script src="js/script.js"></script>
+
+<div id="qrcodeModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <!-- 注意修改下面图片的路径为您实际的文件名，比如 qrcode.png 或 tiktok-qr.jpg -->
+        <img src="images/Douyin.jpg" alt="扫码关注我们">
+        <p>扫码关注我们的 TikTok</p>
+    </div>
+</div>
+
 </body>
 </html>
